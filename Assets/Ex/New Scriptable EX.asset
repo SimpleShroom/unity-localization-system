@@ -12,3 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83b4e3dbe1f1bb94896eacc62d9154d3, type: 3}
   m_Name: New Scriptable EX
   m_EditorClassIdentifier: Assembly-CSharp::ScriptableEX
+  speed: 10
+  freeze: 0
