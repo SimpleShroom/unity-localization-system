@@ -622,6 +622,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 3902352759400044840, guid: ca5e33a7646d690489da40c9f71f20b8, type: 3}
+      propertyPath: tmp
+      value: 
+      objectReference: {fileID: 1875468620}
+    - target: {fileID: 3902352759400044840, guid: ca5e33a7646d690489da40c9f71f20b8, type: 3}
       propertyPath: config
       value: 
       objectReference: {fileID: 11400000, guid: 7f1d4618b3426344bbb45823bb2de92a, type: 2}
@@ -685,6 +689,7 @@ GameObject:
   - component: {fileID: 1875468619}
   - component: {fileID: 1875468621}
   - component: {fileID: 1875468620}
+  - component: {fileID: 1875468622}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -811,6 +816,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1875468618}
   m_CullTransparentMesh: 1
+--- !u!114 &1875468622
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1875468618}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 860a2cab451e9154daf4309490255d90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ExampleBehavior
+  config: {fileID: 11400000, guid: 9a6aa9c3b80dfd247a51648337611207, type: 2}
 --- !u!1001 &8816263431076155589
 PrefabInstance:
   m_ObjectHideFlags: 0

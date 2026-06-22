@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: New Scriptable EX 1
   m_EditorClassIdentifier: Assembly-CSharp::ScriptableEX
   speed: 20
-  freeze: 1
+  freeze: 0
