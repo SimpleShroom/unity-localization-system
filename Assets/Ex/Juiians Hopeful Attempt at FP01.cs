@@ -1,6 +1,5 @@
 using UnityEngine;
 using TMPro;
-using Unity.VisualScripting;
 
 public class JuiiansHopefulAttemptatFP01 : MonoBehaviour
 {
@@ -13,7 +12,7 @@ public class JuiiansHopefulAttemptatFP01 : MonoBehaviour
     void Start()
     {
         //myText.text = hardCodedText.getText();      //F1
-        myText.text = tinyDictionary.getText();       //F2
+        myText.text = tinyDictionary.getText(gameObject.name);       //F2,3,4,5
         
     }
 

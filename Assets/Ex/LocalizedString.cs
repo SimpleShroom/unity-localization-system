@@ -4,8 +4,18 @@ using UnityEngine;
 [Serializable]
 public class LocalizedString : IEquatable<LocalizedString>
 {
+
+    public enum messageState
+    {
+        Local,
+        Localized
+    }
+
     [field: SerializeField] public string Namespace {get; private set;}
     [field: SerializeField] public string Key {get; private set;}
+    [field: SerializeField] public string fallbackString {get; private set;}
+    [field: SerializeField] public messageState msg {get; private set;}
+
     public int NamespaceHash => MyHashUtil.GenerateHashForString(Namespace);    
     public int KeyHash => MyHashUtil.GenerateHashForString(Key);              
 

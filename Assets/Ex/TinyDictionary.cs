@@ -1,5 +1,4 @@
 using System;
-using System.Linq;
 using AYellowpaper.SerializedCollections;
 using UnityEngine;
 
@@ -17,7 +16,7 @@ public class TinyDictionary
 
     //[SerializeField] private int key;
     [SerializeField] private LocalizedString key;
-    public string getText()
+    public string getText(String objectName)
     {
         // foreach (var kvp in tiny)
         // {
@@ -26,15 +25,23 @@ public class TinyDictionary
         // Debug.Log(key.GetHashCode());
 
 
-        if(!tiny.ContainsKey(key))
-        {
-            Debug.LogWarning("Key wasn't found fivehead");
-            return $"[{key.Namespace}:{key.Key}] not found.";
-        }
+        // if(!tiny.ContainsKey(key))
+        // {
+        //     Debug.LogWarning("Key wasn't found fivehead");
+        //     return $"[{key.Namespace}:{key.Key}] not found.";
+        // }
 
+        if(tiny.TryGetValue(key, out string text))
+            return text;
+
+        if(key.msg == LocalizedString.messageState.Local)
+            return key.fallbackString;
+
+        Debug.LogWarning($"GameObject name: {objectName}, Key {key.Key} not found (was set to {key.Namespace}, {key.Key})");
+        return $"[{key.Namespace}:{key.Key}] not found.";
         // Debug.Log(tiny.ContainsKey(key));
 
-        return tiny[key]; 
+        // return tiny[key]; 
     }
 }
 
