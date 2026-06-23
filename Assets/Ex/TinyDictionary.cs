@@ -7,16 +7,27 @@ using UnityEngine;
 [Serializable]
 public class TinyDictionary
 {
-    [SerializeField] private SerializedDictionary<int, string> tiny = new SerializedDictionary<int, string>()
-    {
-        {0, "I did it."},
-        {1, "I couldn't do it"},
-        {2, "I maybe did it"}
-    };
+    [SerializeField] private SerializedDictionary<LocalizedString, string> tiny = new SerializedDictionary<LocalizedString, string>();
 
-    [SerializeField] private int key = 0;
+    //[SerializeField] private SerializedDictionary<LocalizedString, string> tiny = new SerializedDictionary<LocalizedString, string>();
+    // {
+    //     {0, "I did it."},
+    //     {1, "I couldn't do it"},
+    //     {2, "I maybe did it"}
+    // };
+
+    //[SerializeField] private int key;
+    [SerializeField] private LocalizedString key;
     public string getText()
     {
+        foreach (var kvp in tiny)
+        {
+            Debug.Log(kvp.Key.GetHashCode());
+        }
+        Debug.Log(key.GetHashCode());
+
         return tiny[key]; 
     }
 }
+
+

@@ -14,6 +14,7 @@ public class JuiiansHopefulAttemptatFP01 : MonoBehaviour
     {
         //myText.text = hardCodedText.getText();      //F1
         myText.text = tinyDictionary.getText();       //F2
+        
     }
 
     // Update is called once per frame

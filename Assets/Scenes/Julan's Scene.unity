@@ -291,7 +291,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 551421163}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f86369a53e3171b4e9b1ab2103698770, type: 3}
   m_Name: 
@@ -309,6 +309,9 @@ MonoBehaviour:
       - Key: 2
         Value: I maybe did it
     key: 2
+  localizedString:
+    <Namespace>k__BackingField: 
+    <Key>k__BackingField: 
 --- !u!114 &551421166
 MonoBehaviour:
   m_ObjectHideFlags: 0
