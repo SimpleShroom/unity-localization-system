@@ -1,6 +1,5 @@
 using System;
-using System.Collections.Generic;
-using System.Diagnostics.CodeAnalysis;
+using System.Linq;
 using AYellowpaper.SerializedCollections;
 using UnityEngine;
 
@@ -20,11 +19,20 @@ public class TinyDictionary
     [SerializeField] private LocalizedString key;
     public string getText()
     {
-        foreach (var kvp in tiny)
+        // foreach (var kvp in tiny)
+        // {
+        //     Debug.Log(kvp.Key.GetHashCode());
+        // }
+        // Debug.Log(key.GetHashCode());
+
+
+        if(!tiny.ContainsKey(key))
         {
-            Debug.Log(kvp.Key.GetHashCode());
+            Debug.LogWarning("Key wasn't found fivehead");
+            return $"[{key.Namespace}:{key.Key}] not found.";
         }
-        Debug.Log(key.GetHashCode());
+
+        // Debug.Log(tiny.ContainsKey(key));
 
         return tiny[key]; 
     }
